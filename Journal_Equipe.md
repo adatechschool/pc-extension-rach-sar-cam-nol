@@ -10,3 +10,5 @@ LUNDI 12 AVRIL : JOUR 1
 - On commence par la phrase empowerment (projet 1)
 - Matin + après-midi : nous avons regardé la documentation + des tutoriels (vidéos)
 - Cet après-midi : nous avons créer le fichier Manifeste.json, background.js et le fichier popup.html
+
+- Demain : on commencera par créer une phrase qui s'affiche quand on ouvre un onglet
