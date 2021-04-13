@@ -12,3 +12,13 @@ LUNDI 12 AVRIL : JOUR 1
 - Cet après-midi : nous avons créer le fichier Manifeste.json, background.js et le fichier popup.html
 
 - Demain : on commencera par créer une phrase qui s'affiche quand on ouvre un onglet
+
+MARDI 13 AVRIL : JOUR 2
+- MATIN : manipulation simple du pop up et afficher une alerte sur la page + on a précisé le projet sur le conseil de Claire => on va finalement faire une extension qui override l'onglet chrome
+- APREM : on s'est réparti des tâches pour avancer chacune sur des petites features : mettre une icône à l'extension, afficher l'heure (en cours), afficher la phrase (en cours), afficher le background
+
+DEMAIN : résoudre le problème d'override et travailler sur les features en cours 
+
+
+
+
