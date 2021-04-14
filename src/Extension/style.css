@@ -14,6 +14,16 @@ body {
 
 h1 {
   font-family: "Crimson Text", serif;
-  color: black;
+  color: white;
   font-size: xx-large;
+  text-align: center;
+  font-size: 75px;
+  margin-top: 150px;
+}
+
+#horloge {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 35px;
 }
