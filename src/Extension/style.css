@@ -1,8 +1,19 @@
 body {
   background-image: url("landscape.jpg");
   background-repeat: no-repeat;
-  /* Covers all background */
-  background-size: cover;
-  /* Fixed = covers all element without stretching */
-  background-attachment: fixed;
+  background-size: cover; /* Covers all background */
+  background-attachment: fixed; /* Fixed = covers all element without stretching */
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Crimson Text", serif;
+  color: black;
+  font-size: xx-large;
 }

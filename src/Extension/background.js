@@ -1,3 +1,3 @@
-chrome.tabs.getSelected(null, function (tab) {
-  alert("hello tab !");
-});
+// chrome.tabs.getSelected(null, function (tab) {
+//   alert("hello tab !");
+// });
