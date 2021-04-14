@@ -19,6 +19,12 @@ MARDI 13 AVRIL : JOUR 2
 
 DEMAIN : résoudre le problème d'override et travailler sur les features en cours 
 
+MERCREDI 14 AVRIL : JOUR 3
+- MATIN : Annulation de la masterclass, nous avons travaillé sur nos badges et l'exercice individuel de la semaine
+- APREM : nous avons ajouté l'icône de l'extension + l'image de fond + une phrase avec une font personnalisée + l'horloge
+
+DEMAIN : nous voudrions que l'horloge se rafraichisse à chaque seconde + changement de l'image et des phrases à un certain interval (à définir)
+
 
 
 
