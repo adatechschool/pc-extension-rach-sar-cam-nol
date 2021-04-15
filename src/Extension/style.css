@@ -1,4 +1,4 @@
-body {
+#backgroundImage {
   background-image: url("landscape.jpg");
   background-repeat: no-repeat;
   background-size: cover; /* Covers all background */
