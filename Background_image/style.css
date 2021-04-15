@@ -1,9 +1,0 @@
-body {
-    background-image: url("landscape.jpg");
-    background-repeat: no-repeat;
-    /* Covers all background */
-    background-size: cover;
-    /* Fixed = covers all element without stretching */
-    background-attachment: fixed;
-    
-  }
