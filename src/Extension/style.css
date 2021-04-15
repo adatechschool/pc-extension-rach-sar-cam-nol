@@ -1,8 +1,7 @@
 #backgroundImage {
-  background-image: url("landscape.jpg");
   background-repeat: no-repeat;
-  background-size: cover; /* Covers all background */
-  background-attachment: fixed; /* Fixed = covers all element without stretching */
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .container {
@@ -15,7 +14,6 @@
 h1 {
   font-family: "Crimson Text", serif;
   color: white;
-  font-size: xx-large;
   text-align: center;
   font-size: 75px;
   animation: appearText 1000ms linear 1;

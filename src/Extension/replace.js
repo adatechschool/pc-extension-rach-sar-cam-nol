@@ -24,11 +24,11 @@ var background = document.getElementById("backgroundImage");
 
 var counter = 1;
 document.addEventListener("click", function () {
-  if (counter === 20) {
+  if (counter === pics.length) {
     counter = 0;
   }
   background.style.backgroundImage = `url('${pics[counter]}')`;
-  counter = counter + 1;
+  counter += 1;
 });
 
 var counterQuotes = 1;
@@ -48,5 +48,5 @@ document.addEventListener("click", function () {
     counterQuotes = 0;
   }
   quoteToChange.innerHTML = quotes[counterQuotes];
-  counterQuotes = counterQuotes + 1;
+  counterQuotes += 1;
 });
