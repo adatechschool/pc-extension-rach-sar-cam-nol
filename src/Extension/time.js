@@ -1,5 +1,5 @@
 function refresh() {
-  setTimeout(showDate(), 1000);
+  setInterval(showDate, 1000);
 }
 
 function showDate() {
