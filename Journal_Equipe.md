@@ -25,6 +25,18 @@ MERCREDI 14 AVRIL : JOUR 3
 
 DEMAIN : nous voudrions que l'horloge se rafraichisse à chaque seconde + changement de l'image et des phrases à un certain interval (à définir)
 
+JEUDI 15 AVRIL : JOUR 4
+- MATIN : on a résolu le bug pour changer l'image de fond avec un clic, on a fait l'animation de texte pour qu'il apparaisse en fondu
+- APREM : on a appliqué la logique du changement d'image à la citation, et on a crée un début d'input pour le carnet de gatitude
+
+A faire la semaine prochaine : lier les changements d'images et de citation au temps, améliorer le style, développer la feature gratitude
+
+Retour du point d'équipe : 
+- bonne dyynamique de groupe
+- gros + sur la découpe des features et la répartition des tâches 
+- programming en mob quand c'était nécessaire 
+- pas de point négatif, pas de manque 
+
 
 
 
