@@ -1,7 +1,7 @@
 {
-  "name": "Empowerment",
+  "name": "Empowerment Nol",
   "description": "Une extension feel good pour la vie de tous les jours",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 2,
   "chrome_url_overrides": {
     "newtab": "tab.html"
