@@ -1,0 +1,20 @@
+{
+  "name": "Empowerment",
+  "description": "Une extension feel good pour la vie de tous les jours",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "tab.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "permissions": ["http://*/*", "https://*/*", "tabs", "webNavigation"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "64": "grateful_64.png"
+  }
+}

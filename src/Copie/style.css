@@ -1,0 +1,72 @@
+#backgroundImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Crimson Text", serif;
+  color: white;
+  text-align: center;
+  font-size: 75px;
+  animation: appearText 1000ms linear 1;
+}
+
+#horloge {
+  font-family: "Crimson Text", serif;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 35px;
+}
+
+.grateful {
+  color: white;
+  font-family: "Crimson Text", serif;
+  text-align: center;
+  font-size: 40px;
+}
+
+:placeholder-shown {
+  font-size: 40px;
+  border-radius: 20px;
+  background-color: inherit;
+  outline: none;
+}
+
+::placeholder {
+  color: white;
+  font-family: "Crimson Text", serif;
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+  background-color: inherit;
+  opacity: 50%;
+}
+
+@keyframes appearText {
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 10%;
+  }
+
+  50% {
+    opacity: 20%;
+  }
+  75% {
+    opacity: 40%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
