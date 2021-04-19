@@ -16,7 +16,7 @@ function showDate() {
   if (s < 10) {
     s = "0" + s;
   }
-  var time = h + ":" + m + ":" + s;
+  var time = h + " : " + m + " : " + s;
   document.getElementById("horloge").innerHTML = time;
   refresh();
 }

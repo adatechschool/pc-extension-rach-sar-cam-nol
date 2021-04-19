@@ -16,7 +16,6 @@ h1 {
   color: white;
   text-align: center;
   font-size: 75px;
-  animation: appearText 1000ms linear 1;
 }
 
 #horloge {
@@ -34,24 +33,4 @@ h1 {
 ::placeholder {
   text-align: center;
   font-size: 10px;
-}
-
-@keyframes appearText {
-  0% {
-    opacity: 0%;
-  }
-  25% {
-    opacity: 10%;
-  }
-
-  50% {
-    opacity: 20%;
-  }
-  75% {
-    opacity: 40%;
-  }
-
-  100% {
-    opacity: 100%;
-  }
 }
