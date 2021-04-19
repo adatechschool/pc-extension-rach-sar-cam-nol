@@ -1,4 +1,5 @@
 var pics = [
+  "img/landscape_1.jpg",
   "img/landscape_2.jpg",
   "img/landscape_3.jpg",
   "img/landscape_4.jpg",
@@ -9,7 +10,8 @@ var pics = [
 ];
 
 var quotes = [
-  "Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.",
+  "Take a deep breath. Inhale peace, exhale happiness.",
+  "Yesterday I was clever, so I wanted to change the world.~Today I am wise, so I am changing myself.",
   "Raise your words, not voice. It is rain that grows flowers, not thunder.",
   "It’s a good day to have a good day.",
   "Feed your mind with positive thoughts, and attract great things in your life.",
@@ -23,9 +25,9 @@ var quoteToChange = document.getElementById("quoteToChange");
 
 var counter = 0;
 
-function updateContent(){
+function updateContent() {
   if (counter === pics.length) {
-      counter = 0;
+    counter = 0;
   }
   background.style.backgroundImage = `url('${pics[counter]}')`;
   quoteToChange.innerHTML = quotes[counter];
@@ -43,4 +45,11 @@ function quoteAppear() {
   quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
 }
 
-updateContent(); 
+updateContent();
+
+function breakLine() {
+  var br = quotes.split("~").join("<br>");
+  return br;
+}
+
+breakLine();
