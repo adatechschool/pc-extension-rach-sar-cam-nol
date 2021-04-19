@@ -35,7 +35,13 @@ Retour du point d'équipe :
 - bonne dyynamique de groupe
 - gros + sur la découpe des features et la répartition des tâches 
 - programming en mob quand c'était nécessaire 
-- pas de point négatif, pas de manque 
+- pas de point négatif, pas de manque
+
+LUNDI 19/04 : JOUR 5 2ème semaine 
+- MATIN : revue de code, création de nouvelles issues, fix fondu quote (Rachel), Changement background+quote toutes les 5 secondes (Sarah), CSS Placeholder (Nolwenn), Lier animation à un horaire (Camille) 
+- APREM : mise en commun code, git branch tuto avec Romaine, Camille a continué sur sa feature, fix breaking line quote (Rachel), Récuperer input du placeholder (Nolwenn), bug CSS au niveau du placeholder (Sarah) 
+
+A faire demain : checker feature Camille, en cours toujours feature Nolwenn et Sarah, fix nouveau bug quote (elles ne s'affichent pas toutes) (Rachel) 
 
 
 
