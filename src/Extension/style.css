@@ -59,4 +59,14 @@ h1 {
   background-color: inherit;
   outline: none;
   border-radius: 20px;
+  opacity: 70%;
+}
+
+.enter-button {
+  color: white;
+  font-family: "Crimson Text", serif;
+  text-align: center;
+  font-size: 15px;
+  background-color: inherit;
+  border-radius: 20px;
 }
