@@ -51,7 +51,6 @@ var counter = 0;
 
 function updateContent() {
   quoteAppear();
-  replaceContent();
   if (counter === pics.length) {
     counter = 0;
   }
