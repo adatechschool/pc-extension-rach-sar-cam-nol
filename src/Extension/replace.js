@@ -51,7 +51,6 @@ var counter = 0;
 
 function updateContent() {
   quoteAppear();
-  replaceContent();
   if (counter === pics.length) {
     counter = 0;
   }
@@ -67,7 +66,7 @@ function replaceContent() {
 }
 
 function quoteAppear() {
-  var quote = document.getElementById("quoteToChange");
+  // var quote = document.getElementById("quoteToChange");
   quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
 }
 
