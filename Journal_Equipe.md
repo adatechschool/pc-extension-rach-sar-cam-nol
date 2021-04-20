@@ -43,6 +43,10 @@ LUNDI 19/04 : JOUR 5 2ème semaine
 
 A faire demain : checker feature Camille, en cours toujours feature Nolwenn et Sarah, fix nouveau bug quote (elles ne s'affichent pas toutes) (Rachel) 
 
+MARDI 20/04 : JOUR 6 2ème semaine
+- MATIN : découpage de la fonction liée à l'affichage d'image/quote selon les heures - à ce sujet, les conditions selon les heures fonctionnaient, mais pas le compteur (Sara & Camille), design complété du placeholder gratitude (Nolwenn), resize des images, ajout de 20 quotes (Rachel).
+- APREM : résolution du bug quote (Rachel), récupération de la valeur de l'input gratitude (Nolwenn & Camille), continuation du travail sur la fonction liée à l'affichage d'image/quote selon les heures (Sara & Rachel).
 
+A FAIRE DEMAIN : résoudre ce problème de fonction liée aux heures de la journée + faire exécuter fonction gratitude le soir.
 
 
