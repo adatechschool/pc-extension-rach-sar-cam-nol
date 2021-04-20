@@ -49,3 +49,14 @@ h1 {
   background-color: inherit;
   opacity: 50%;
 }
+
+.input-placeholder {
+  color: white;
+  font-family: "Crimson Text", serif;
+  text-align: center;
+  font-size: 40px;
+  font-style: italic;
+  background-color: inherit;
+  outline: none;
+  border-radius: 20px;
+}
