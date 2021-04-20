@@ -44,30 +44,55 @@ var quotes = [
   "Take a moment to appreciate how far you've come.",
 ];
 
-var background = document.getElementById("backgroundImage");
-var quoteToChange = document.getElementById("quoteToChange");
-
-var counter = 0;
-
-function updateContent() {
-  quoteAppear();
-  if (counter === pics.length) {
-    counter = 0;
-  }
-  background.style.backgroundImage = `url('${pics[counter]}')`;
-  quoteToChange.innerHTML = quotes[counter].split("~").join("<br>");
-  counter += 1
-  
-  console.log(counter);
-
-}
-
-function replaceContent() {
-  setInterval(updateContent, 5000);
-}
-
 function quoteAppear() {
   quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
 }
 
-replaceContent();
+var background = document.getElementById("backgroundImage");
+var quoteToChange = document.getElementById("quoteToChange");
+
+let counterMorning = 0;
+
+function contentMorning() {
+  quoteAppear();
+  if (counterMorning === quotes.length) {
+    counterMorning = 0;
+  }
+  background.style.backgroundImage = `url('${pics[counterMorning]}')`;
+  quoteToChange.innerHTML = quotes[counterMorning].split("~").join("<br>");
+  counterMorning += 1;
+  // console.log("hello it's working");
+}
+
+function updateContent() {
+  var now = new Date();
+  hours = now.getHours();
+  minutes = now.getMinutes();
+  seconds = now.getSeconds();
+
+  var millisTill7 =
+    new Date(now.getFullYear(), now.getMonth(), now.getDate(), 17, 03, 0, 0) -
+    now;
+  if (millisTill7 < 0) {
+    millisTill7 += 86400000;
+  }
+  // setTimeout(function () {
+  //   alert("It's 7am!");
+  // }, millisTill7);
+
+  setTimeout(contentMorning, millisTill7);
+}
+
+//  if (hours >= 9 && hours < 17) {
+//   if (seconds <= 30) {
+//     counterMorning += 1;
+//     updateContent();
+//     console.log("hello");
+//   } else {
+//     counterMorning += 1;
+//     console.log("hello2");
+//   }
+// }
+
+contentMorning();
+updateContent();
