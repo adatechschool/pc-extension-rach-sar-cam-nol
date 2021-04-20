@@ -10,7 +10,7 @@ var pics = [
 ];
 
 var quotes = [
-  "Take a deep breath. Inhale peace, exhale happiness.",
+  "Take a deep breath.~Inhale peace, exhale happiness.",
   "Yesterday I was clever, so I wanted to change the world.~Today I am wise, so I am changing myself.",
   "Raise your words, not voice. It is rain that grows flowers, not thunder.",
   "It’s a good day to have a good day.",
@@ -30,14 +30,14 @@ function updateContent() {
     counter = 0;
   }
   background.style.backgroundImage = `url('${pics[counter]}')`;
-  quoteToChange.innerHTML = quotes[counter];
+  quoteToChange.innerHTML = quotes[counter].split("~").join("<br>");
   counter += 1;
   replaceContent();
   quoteAppear();
 }
 
 function replaceContent() {
-  setInterval(updateContent, 5000);
+  setInterval(updateContent, 10000);
 }
 
 function quoteAppear() {
@@ -46,10 +46,3 @@ function quoteAppear() {
 }
 
 updateContent();
-
-function breakLine() {
-  var br = quotes.split("~").join("<br>");
-  return br;
-}
-
-breakLine();
