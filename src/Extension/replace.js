@@ -32,7 +32,6 @@ function updateContent() {
   background.style.backgroundImage = `url('${pics[counter]}')`;
   quoteToChange.innerHTML = quotes[counter].split("~").join("<br>");
   counter += 1;
-  replaceContent();
   quoteAppear();
 }
 
@@ -41,8 +40,7 @@ function replaceContent() {
 }
 
 function quoteAppear() {
-  var quote = document.getElementById("quoteToChange");
   quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
 }
 
-updateContent();
+replaceContent();
