@@ -49,4 +49,7 @@ MARDI 20/04 : JOUR 6 2ème semaine
 
 A FAIRE DEMAIN : résoudre ce problème de fonction liée aux heures de la journée + faire exécuter fonction gratitude le soir.
 
+MERCREDI 21/04 : JOUR 7 2eme semaine
+- APREM : le code marche avec le timer 
 
+- A faire demain : ajouter le counter aprèm + ajouter input dans css
