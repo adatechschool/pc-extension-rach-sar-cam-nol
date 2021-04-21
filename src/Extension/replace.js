@@ -61,38 +61,20 @@ function contentMorning() {
   background.style.backgroundImage = `url('${pics[counterMorning]}')`;
   quoteToChange.innerHTML = quotes[counterMorning].split("~").join("<br>");
   counterMorning += 1;
-  // console.log("hello it's working");
 }
 
-function updateContent() {
+function replaceContent() {
   var now = new Date();
   hours = now.getHours();
   minutes = now.getMinutes();
   seconds = now.getSeconds();
-
-  var millisTill7 =
-    new Date(now.getFullYear(), now.getMonth(), now.getDate(), 17, 03, 0, 0) -
-    now;
-  if (millisTill7 < 0) {
-    millisTill7 += 86400000;
+  if (seconds <= 30) {
+    contentMorning();
+  } else {
+    console.log("else");
+    //add condition
   }
-  // setTimeout(function () {
-  //   alert("It's 7am!");
-  // }, millisTill7);
-
-  setTimeout(contentMorning, millisTill7);
+  setTimeout(replaceContent, 10000);
 }
 
-//  if (hours >= 9 && hours < 17) {
-//   if (seconds <= 30) {
-//     counterMorning += 1;
-//     updateContent();
-//     console.log("hello");
-//   } else {
-//     counterMorning += 1;
-//     console.log("hello2");
-//   }
-// }
-
-contentMorning();
-updateContent();
+replaceContent();
