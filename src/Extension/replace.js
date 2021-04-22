@@ -37,8 +37,14 @@ var quotes = [
   "Every day is a day you've never seen before.",
 ];
 
-function quoteAppear() {
-  quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
+function updateQuote(hidden) {
+  if (hidden === true) {
+    quoteToChange.style.opacity = 0;
+    console.log("hiddentrue");
+  } else {
+    quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
+    console.log("hiddenfalse");
+  }
 }
 
 var background = document.getElementById("backgroundImage");
@@ -77,11 +83,12 @@ function replaceContent() {
   if (seconds <= 30) {
     console.log("if");
     contentMorning();
-    quoteAppear();
+    updateQuote(false);
   }
   if (seconds > 30) {
     console.log("else");
     contentEvening();
+    updateQuote(true);
   }
 }
 
