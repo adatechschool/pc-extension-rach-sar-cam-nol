@@ -92,7 +92,7 @@ function replaceContent() {
   hours = now.getHours();
   minutes = now.getMinutes();
   seconds = now.getSeconds();
-  //Real : if (hours >= 6 && hours < 1h)
+  //Real : if (hours >= 6 && hours < 18h)
   if (seconds <= 30) {
     console.log("if");
     contentCounterMorning();
