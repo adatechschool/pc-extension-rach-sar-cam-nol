@@ -1,4 +1,4 @@
-var pics = [
+var picsMorning = [
   "img/landscape_1.jpg",
   "img/landscape_2.jpg",
   "img/landscape_3.jpg",
@@ -7,40 +7,81 @@ var pics = [
   "img/landscape_6.jpg",
   "img/landscape_7.jpg",
   "img/landscape_8.jpg",
+  "img/landscape_9.jpg",
+  "img/landscape_10.jpg",
 ];
-
+​
+var picsEvening = [
+  "img/landscape_11.jpg",
+  "img/landscape_12.jpg",
+  "img/landscape_13.jpg",
+  "img/landscape_14.jpg",
+  "img/landscape_15.jpg",
+  "img/landscape_16.jpg",
+  "img/landscape_17.jpg",
+  "img/landscape_18.jpg",
+  "img/landscape_19.jpg",
+  "img/landscape_20.jpg",
+];
+​
 var quotes = [
   "Take a deep breath.~Inhale peace, exhale happiness.",
-  "Yesterday I was clever, so I wanted to change the world.~Today I am wise, so I am changing myself.",
-  "Raise your words, not voice. It is rain that grows flowers, not thunder.",
+  "Yesterday I was clever,~so I wanted to change the world.~Today I am wise, so I am changing myself.",
+  "Raise your words, not voice.~It is rain that grows flowers, not thunder.",
   "It’s a good day to have a good day.",
-  "Feed your mind with positive thoughts, and attract great things in your life.",
+  "Feed your mind with positive thoughts,~and attract great things in your life.",
   "Be such a good soul that people crave your vibes.",
-  "You can’t stop the waves, but you can learn to surf.",
+  "You can’t stop the waves,~but you can learn to surf.",
   "Just enjoy where you are now.",
+  "Look good, feel good, do good.",
+  "Every day is a day you've never seen before.",
 ];
-
-var background = document.getElementById("backgroundImage");
-var quoteToChange = document.getElementById("quoteToChange");
-
-var counter = 0;
-
-function updateContent() {
-  if (counter === pics.length) {
-    counter = 0;
-  }
-  background.style.backgroundImage = `url('${pics[counter]}')`;
-  quoteToChange.innerHTML = quotes[counter].split("~").join("<br>");
-  counter += 1;
-  quoteAppear();
-}
-
-function replaceContent() {
-  setInterval(updateContent, 10000);
-}
-
+​
 function quoteAppear() {
   quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
 }
-
+​
+var background = document.getElementById("backgroundImage");
+var quoteToChange = document.getElementById("quoteToChange");
+​
+let counterMorning = 0;
+let counterEvening = 0;
+​
+function contentMorning() {
+  if (counterMorning === picsMorning.length) {
+    counterMorning = 0;
+  }
+  background.style.backgroundImage = `url('${picsMorning[counterMorning]}')`;
+  quoteToChange.innerHTML = quotes[counterMorning].split("~").join("<br>");
+  console.log("blablaMorning", counterMorning);
+  counterMorning += 1;
+}
+​
+function contentEvening() {
+  if (counterEvening === picsEvening.length) {
+    counterEvening = 0;
+  }
+    background.style.backgroundImage = `url('${picsEvening[counterEvening]}')`;
+    console.log("blablaEvening", counterEvening);
+    counterEvening += 1;
+} 
+​
+function replaceContent() {
+  var now = new Date();
+  hours = now.getHours();
+  minutes = now.getMinutes();
+  seconds = now.getSeconds();
+​
+  if (seconds <= 30) {
+    console.log("if");
+    contentMorning();
+    quoteAppear();
+​
+  } if (seconds > 30) {
+    console.log("else");
+    contentEvening();
+  }
+  setTimeout(replaceContent, 1000);
+}
+​
 replaceContent();
