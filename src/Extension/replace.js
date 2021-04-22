@@ -10,7 +10,7 @@ var picsMorning = [
   "img/landscape_9.jpg",
   "img/landscape_10.jpg",
 ];
-​
+
 var picsEvening = [
   "img/landscape_11.jpg",
   "img/landscape_12.jpg",
@@ -23,7 +23,7 @@ var picsEvening = [
   "img/landscape_19.jpg",
   "img/landscape_20.jpg",
 ];
-​
+
 var quotes = [
   "Take a deep breath.~Inhale peace, exhale happiness.",
   "Yesterday I was clever,~so I wanted to change the world.~Today I am wise, so I am changing myself.",
@@ -36,17 +36,17 @@ var quotes = [
   "Look good, feel good, do good.",
   "Every day is a day you've never seen before.",
 ];
-​
+
 function quoteAppear() {
   quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
 }
-​
+
 var background = document.getElementById("backgroundImage");
 var quoteToChange = document.getElementById("quoteToChange");
-​
+
 let counterMorning = 0;
 let counterEvening = 0;
-​
+
 function contentMorning() {
   if (counterMorning === picsMorning.length) {
     counterMorning = 0;
@@ -56,32 +56,32 @@ function contentMorning() {
   console.log("blablaMorning", counterMorning);
   counterMorning += 1;
 }
-​
+
 function contentEvening() {
   if (counterEvening === picsEvening.length) {
     counterEvening = 0;
   }
-    background.style.backgroundImage = `url('${picsEvening[counterEvening]}')`;
-    console.log("blablaEvening", counterEvening);
-    counterEvening += 1;
-} 
-​
+  background.style.backgroundImage = `url('${picsEvening[counterEvening]}')`;
+  console.log("blablaEvening", counterEvening);
+  counterEvening += 1;
+}
+
 function replaceContent() {
   var now = new Date();
   hours = now.getHours();
   minutes = now.getMinutes();
   seconds = now.getSeconds();
-​
+
   if (seconds <= 30) {
     console.log("if");
     contentMorning();
     quoteAppear();
-​
-  } if (seconds > 30) {
+  }
+  if (seconds > 30) {
     console.log("else");
     contentEvening();
   }
   setTimeout(replaceContent, 1000);
 }
-​
+
 replaceContent();
