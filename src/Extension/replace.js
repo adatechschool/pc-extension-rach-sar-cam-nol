@@ -37,12 +37,17 @@ var quotes = [
   "Every day is a day you've never seen before.",
 ];
 
+function quoteAppear() {
+  quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
+}
+
 function updateQuote(hidden) {
   if (hidden === true) {
-    quoteToChange.style.opacity = 0;
+    quoteToChange.style.display = "none";
     console.log("hiddentrue");
   } else {
-    quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
+    quoteAppear();
+    quoteToChange.style.display = "block";
     console.log("hiddenfalse");
   }
 }
@@ -58,7 +63,6 @@ function updateGrateful(hidden){
 
 var background = document.getElementById("backgroundImage");
 var quoteToChange = document.getElementById("quoteToChange");
-//var questionGrateful = document.getElementsByClassName("grateful");
 
 let counterMorning = 0;
 let counterEvening = 0;
@@ -88,13 +92,14 @@ function replaceContent() {
   hours = now.getHours();
   minutes = now.getMinutes();
   seconds = now.getSeconds();
-
+  //Real : if (hours >= 6 && hours < 1h)
   if (seconds <= 30) {
     console.log("if");
     contentMorning();
     updateQuote(false);
     updateGrateful(true);
   }
+  //Real : if (hours >= 18h && hours < 6h)
   if (seconds > 30) {
     console.log("else");
     contentEvening();
@@ -102,6 +107,7 @@ function replaceContent() {
     updateGrateful(false);
   }
 }
+//Real : setInterval(replaceContent, 43200000);
 setInterval(replaceContent, 10000);
 
 replaceContent();
