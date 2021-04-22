@@ -10,7 +10,7 @@ var picsMorning = [
   "img/landscape_9.jpg",
   "img/landscape_10.jpg",
 ];
-​
+
 var picsEvening = [
   "img/landscape_11.jpg",
   "img/landscape_12.jpg",
