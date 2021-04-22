@@ -82,13 +82,13 @@ function replaceContent() {
 
   if (seconds <= 30) {
     console.log("if");
-    quoteToChange.style.display = "block";
     document.getElementById("grateful").style.display = "none";
     contentMorning();
     updateQuote(false);
   }
   if (seconds > 30) {
     console.log("else");
+    document.getElementById("grateful").style.display = "flex";
     contentEvening();
 
     updateQuote(true);
