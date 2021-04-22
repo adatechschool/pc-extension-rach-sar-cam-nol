@@ -37,7 +37,33 @@ var quotes = [
   "Every day is a day you've never seen before.",
 ];
 
-function quoteAppear() {
+
+var background = document.getElementById("backgroundImage");
+var quoteToChange = document.getElementById("quoteToChange");
+
+let counterMorning = 0;
+let counterEvening = 0;
+
+function contentCounterMorning() {
+  if (counterMorning === picsMorning.length) {
+    counterMorning = 0;
+  }
+  background.style.backgroundImage = `url('${picsMorning[counterMorning]}')`;
+  quoteToChange.innerHTML = quotes[counterMorning].split("~").join("<br>");
+  console.log("blablaMorning", counterMorning);
+  counterMorning += 1;
+}
+
+function contentCounterEvening() {
+  if (counterEvening === picsEvening.length) {
+    counterEvening = 0;
+  }
+  background.style.backgroundImage = `url('${picsEvening[counterEvening]}')`;
+  console.log("blablaEvening", counterEvening);
+  counterEvening += 1;
+}
+
+function quoteAppears() {
   quoteToChange.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1500 });
 }
 
@@ -46,7 +72,7 @@ function updateQuote(hidden) {
     quoteToChange.style.display = "none";
     console.log("hiddentrue");
   } else {
-    quoteAppear();
+    quoteAppears();
     quoteToChange.style.display = "block";
     console.log("hiddenfalse");
   }
@@ -61,32 +87,6 @@ function updateGrateful(hidden){
   }
 }
 
-var background = document.getElementById("backgroundImage");
-var quoteToChange = document.getElementById("quoteToChange");
-
-let counterMorning = 0;
-let counterEvening = 0;
-
-function contentMorning() {
-  if (counterMorning === picsMorning.length) {
-    counterMorning = 0;
-  }
-  background.style.backgroundImage = `url('${picsMorning[counterMorning]}')`;
-  quoteToChange.innerHTML = quotes[counterMorning].split("~").join("<br>");
-  console.log("blablaMorning", counterMorning);
-  counterMorning += 1;
-}
-
-function contentEvening() {
-  if (counterEvening === picsEvening.length) {
-    counterEvening = 0;
-  }
-  background.style.backgroundImage = `url('${picsEvening[counterEvening]}')`;
-  //  grateful.innerHTML = questionGrateful;
-  console.log("blablaEvening", counterEvening);
-  counterEvening += 1;
-}
-
 function replaceContent() {
   var now = new Date();
   hours = now.getHours();
@@ -95,14 +95,14 @@ function replaceContent() {
   //Real : if (hours >= 6 && hours < 1h)
   if (seconds <= 30) {
     console.log("if");
-    contentMorning();
+    contentCounterMorning();
     updateQuote(false);
     updateGrateful(true);
   }
   //Real : if (hours >= 18h && hours < 6h)
   if (seconds > 30) {
     console.log("else");
-    contentEvening();
+    contentCounterEvening();
     updateQuote(true);
     updateGrateful(false);
   }
