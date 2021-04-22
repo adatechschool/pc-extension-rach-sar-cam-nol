@@ -43,6 +43,7 @@ function quoteAppear() {
 
 var background = document.getElementById("backgroundImage");
 var quoteToChange = document.getElementById("quoteToChange");
+//var questionGrateful = document.getElementsByClassName("grateful");
 
 let counterMorning = 0;
 let counterEvening = 0;
@@ -62,6 +63,7 @@ function contentEvening() {
     counterEvening = 0;
   }
   background.style.backgroundImage = `url('${picsEvening[counterEvening]}')`;
+  //  grateful.innerHTML = questionGrateful;
   console.log("blablaEvening", counterEvening);
   counterEvening += 1;
 }
@@ -81,7 +83,8 @@ function replaceContent() {
     console.log("else");
     contentEvening();
   }
-  setTimeout(replaceContent, 1000);
 }
+
+setInterval(replaceContent, 10000);
 
 replaceContent();
