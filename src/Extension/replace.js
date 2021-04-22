@@ -74,14 +74,18 @@ function replaceContent() {
 
   if (seconds <= 30) {
     console.log("if");
+    quoteToChange.style.display = "block";
+    document.getElementById("grateful").style.display = "none";
     contentMorning();
     quoteAppear();
   }
   if (seconds > 30) {
     console.log("else");
     contentEvening();
+    quoteToChange.style.display = "none";
+    document.getElementById("grateful").style.display = "flex";
   }
-  setTimeout(replaceContent, 1000);
+  setTimeout(replaceContent, 5000);
 }
 
 replaceContent();
