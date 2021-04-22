@@ -47,6 +47,15 @@ function updateQuote(hidden) {
   }
 }
 
+function updateGrateful(hidden){
+  if (hidden === true){
+    document.getElementById("grateful").style.display = "none";
+  }
+  else {
+    document.getElementById("grateful").style.display = "flex";
+  }
+}
+
 var background = document.getElementById("backgroundImage");
 var quoteToChange = document.getElementById("quoteToChange");
 //var questionGrateful = document.getElementsByClassName("grateful");
@@ -82,16 +91,15 @@ function replaceContent() {
 
   if (seconds <= 30) {
     console.log("if");
-    document.getElementById("grateful").style.display = "none";
     contentMorning();
     updateQuote(false);
+    updateGrateful(true);
   }
   if (seconds > 30) {
     console.log("else");
-    document.getElementById("grateful").style.display = "flex";
     contentEvening();
-
     updateQuote(true);
+    updateGrateful(false);
   }
 }
 setInterval(replaceContent, 10000);
